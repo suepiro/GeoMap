@@ -16,4 +16,3 @@ by [Michael Hartl](http://michaelhartl.com/).
 編集
  git commit -m "Re.copy"
  git push
- heroku login
