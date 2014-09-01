@@ -62,6 +62,8 @@ GEM
       i18n (~> 0.5)
     ffi (1.9.3)
     formatador (0.2.5)
+    geocoder (1.2.4)
+    gmaps4rails (2.1.2)
     guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -213,6 +215,8 @@ DEPENDENCIES
   execjs
   factory_girl_rails (= 4.2.1)
   faker (= 1.1.2)
+  geocoder
+  gmaps4rails
   guard-rspec (= 2.5.0)
   guard-spork (= 1.5.0)
   jbuilder (= 1.0.2)

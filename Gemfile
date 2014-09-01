@@ -44,3 +44,5 @@ end
 gem 'execjs'
 gem 'therubyracer'
 gem 'rb-readline'
+gem "gmaps4rails"
+gem "geocoder"
