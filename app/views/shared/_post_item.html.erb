@@ -1,0 +1,11 @@
+<li id="<%= post_item.id %>">
+	<%= link_to gravatar_for(post_item.user), post_item.user %>
+	    <span class="user">
+		    <%= link_to post_item.user.name, post_item.user %>
+	    </span>
+	    <span class="content"><%= post_item.content %></span>
+	    <span class="timestamp">
+		    Posted <%= time_ago_in_words(post_item.created_at) %> ago.
+	    </span>
+<%#		<%= render 'shared/post_delete_link', object: post_item %>
+</li>

@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :signed_in_user, only: [:create, :new, :destroy, :edit, :update, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
