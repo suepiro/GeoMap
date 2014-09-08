@@ -1,5 +1,27 @@
 <div class="row">
-  <aside class="span4">
+  <div class="span3">
+    <section>
+    <div>
+      <h3>Post Feed(<%= @posts.count %>)</h3>
+      <%= render 'shared/post' %>
+    </div>
+    </section>
+    <section>
+      <%= link_to "Post up", postup_path, class: "btn btn-large btn-primary" %>
+    </section>
+  </div>
+
+  <div class="span6">
+    <div id="map"></div>
+  </div>
+
+  <aside class="span3">
+    <section>
+    <div>
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+    </section>
     <section>
       <%= render 'shared/user_info' %>
     </section>
@@ -8,21 +30,11 @@
     </section>
     <section>
       <%= render 'shared/micropost_form' %>
-    </section>
+    </section> 
   </aside>
-  <div class="span8">
-    <h3>Micropost Feed</h3>
-    <%= render 'shared/feed' %>
-  </div>
 
-  <div class="span8">
-      <h3>Posts (<%= @user.posts.count %>)</h3>
-      <%= render 'shared/post' %>
-  </div>
 
-  <div style='width: 800px;'>
-    <div id="map" style='width: 800px; height: 400px;'></div>
-  </div>
+</div>
 
   <script type="text/javascript">
     handler = Gmaps.build('Google');
@@ -33,4 +45,3 @@
       });
   </script>
 
-</div>
