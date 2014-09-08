@@ -1,4 +1,5 @@
 SampleApp::Application.routes.draw do
+  get "spot/index"
   resources :posts
 
   resources :users do
@@ -17,6 +18,7 @@ SampleApp::Application.routes.draw do
 	#get "static_pages/about"
   match '/about',   to: 'static_pages#about',   via: 'get'
   #get "static_pages/contact"
+  match '/spot',    to: 'static_pages#spot',    via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'

@@ -23,4 +23,15 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def spot
+    @posts = Post.all
+    @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
+      marker.lat post.latitude
+      marker.lng post.longitude
+      marker.infowindow post.description
+      marker.json({title: post.title})
+    end
+  end
+
 end
