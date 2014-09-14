@@ -26,6 +26,7 @@ class StaticPagesController < ApplicationController
 
   def spot
     @posts = Post.all
+    @post_items = Post.all.paginate(page: params[:page])
     @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
       marker.lat post.latitude
       marker.lng post.longitude

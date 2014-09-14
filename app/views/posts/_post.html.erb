@@ -3,4 +3,5 @@
 	<span class="timestamp">
 		Posted <%= time_ago_in_words(post.created_at) %> ago.
 	</span>
+    <%= render 'shared/_post_delete_link', object: post %>
 </li>
