@@ -6,16 +6,23 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+  respond_to do |format|
+    format.html
+    format.json { render json: @posts }
+  end
+
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @post_pictures = @post.post_pictures.all
   end
 
   # GET /posts/new
   def new
     @post = Post.new
+    @post_pictures = @post.post_pictures.build
   end
 
   # GET /posts/1/edit
@@ -26,14 +33,21 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = current_user.posts.build(post_params)
+
     respond_to do |format|
       if @post.save
         flash[:success] = "Post created!"
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @post }
+        #params[:post_pictures]['image'].each do |a|
+        #  @post_picture = @post.post_pictures.create!(:image => a, :post_id => @post.id)
+       #end
+       format.html { redirect_to posts_url, notice: 'Post was successfully created.' }
+       #format.json { render action: 'show', status: :created, location: @post }
+       format.json { render json: @post, status: :created, location: @post }
       else
-        format.html { render action: 'new' }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        #format.html { render action: 'new' }
+        format.html {}
+        #format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.json {}
       end
     end
   end
@@ -55,7 +69,9 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    @post = Post.find(params[:id])
     @post.destroy
+
     respond_to do |format|
       format.html { redirect_to posts_url }
       format.json { head :no_content }
@@ -70,6 +86,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :description, :content, :address, :latitude, :longitude, :user_id, :date)
+      params.require(:post).permit(:title, :description, :content, :address, :latitude, :longitude, :user_id, :date, post_pictures_attributes: [:id, :post_id, :image])
     end
 end

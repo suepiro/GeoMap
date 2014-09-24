@@ -17,6 +17,7 @@
 //= require_tree .
 //= require underscore
 //= require gmaps/google
+//= require jquery-fileupload
 //= require pickadate
 $(document).ready($(function() {
       $('.date').pickadate()

@@ -6,4 +6,7 @@ class Post < ActiveRecord::Base
 	validates :description, presence: true, length: { maximum: 140 }
 	geocoded_by :address
 	after_validation :geocode
+  has_many :post_pictures, dependent: :destroy
+  accepts_nested_attributes_for :post_pictures, :allow_destroy => true
+
 end

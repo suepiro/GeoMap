@@ -46,3 +46,7 @@ gem 'therubyracer'
 gem 'rb-readline'
 gem "gmaps4rails"
 gem "geocoder"
+gem 'carrierwave', '0.10.0'
+gem 'rmagick', '2.13.3'
+gem 'jquery-fileupload-rails', '0.4.1'
+

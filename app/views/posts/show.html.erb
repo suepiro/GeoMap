@@ -40,5 +40,11 @@
   <%= @post.date %>
 </p>
 
+<strong>Picture:</strong><br/>
+<% @post_pictures.each do |p| %>
+  <%= image_tag p.image_url(:thumb).to_s %>
+  <%= render 'shared/post_picture_delete_link', object: p %></br>
+<% end %>
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>

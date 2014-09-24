@@ -975,12 +975,15 @@ migrateファイルを表示してみる
     end
 
 migrateする
+
 	$ rake db:migrate
 
 次にPost.rbモデルにphoto用のカラムを記載
+
 	$ vi app/models/post.rb
     
 以下のように編集
+
     class Post < ActiveRecord::Base
     (略)
     has_attached_file :photo, :styles => { medium: "300x300>", thumb: "100x100>" } #attached_fileとして保存、画像サイズを指定
@@ -990,22 +993,24 @@ migrateする
 今度は 作成と編集画面のERbにファイルアップロード用のinput要素を追加する。  
 ※ ファイルなどをサーバに送信する場合、HTML的に "multipart" という属性が必要だが、form_forメソッド時のときは自動で追加され、form_tagメソッドの時は自分で記載する。
 
-$ vi app/views/posts/_post_form.html.erb
-         ....
-    +  <div class="field">
-    +     <%= f.file_field :photo %>
-    +  </div>
-         ....
+    $ vi app/views/posts/_post_form.html.erb
+             ....
+        +  <div class="field">
+        +     <%= f.file_field :photo %>
+        +  </div>
+             ....
 
 Rails4からstrong parametersという機能が追加されたため、input属性の "photo" をアップロードできるようにするため、以下を PostsController に追加します。
-$ vi app/controllers/posts_controller.rb
-       ...
-        def post_params
-    *      params.require(:picture).permit(:name, :photo)
-        end
+
+    $ vi app/controllers/posts_controller.rb
+           ...
+            def post_params
+        *      params.require(:picture).permit(:name, :photo)
+            end
 実際には既にdefされていたので、permitの中に:photoのみ追加した  
   
 アップロードした画像を表示するために詳細画面のERbに表示領域を追加
+
     $ vi app/views/posts/show.html.erb
     
          ...
@@ -1019,7 +1024,7 @@ $ vi app/controllers/posts_controller.rb
 アップロードファイルの保存先とバリデーション  
 保存先はurlとpathで指定し、Validationは次のような項目がある
 
-$ vi app/models/post.rb
+    $ vi app/models/post.rb
 
     class Post < ActiveRecord::Base
         has_attached_file :post, 
@@ -1188,6 +1193,7 @@ views/posts/show.html.erbの写真を表示している以下の部分を編集
 
 
 #### Carrierwaveを使って複数画像をアップロード 再び
+先ほどの変更を取り消して、以下を進める。  
 Postが複数のPictureを持つことにする  
 Gemfileに以下を追加
 
@@ -1256,7 +1262,7 @@ app/assets/stylesheets
 
 画像アップロード時にサムネイルを作成する     
 
-uploaders/picture_uploader.rbの以下の行のコメントアウトを外す
+app/uploaders/picture_uploader.rbの以下の行のコメントアウトを外す
 
     # include CarrierWave::RMagick
 
@@ -1694,7 +1700,7 @@ showを編集
       <%= @post.title %>
     </p>
 
-    //これを追加
+    //これを追加, renderでdeleteリンクを指定している
     <strong>Picture:</strong><br/>
     <% @post_pictures.each do |p| %>
       <%= image_tag p.image_url(:thumb).to_s %>
@@ -1703,6 +1709,15 @@ showを編集
 
     <%= link_to 'Edit', edit_post_path(@post) %> |
     <%= link_to 'Back', posts_path %>
+
+先程指定したsharedの削除ボタンを作成
+
+    $ vi app/views/shared/_post_picture_delete_link.html.erb
+
+    <%# if current_user?(object.post) %>
+      <%= link_to "delete", object, method: "delete" %>
+    <%# end %>
+
 
 
 ここまでをpushしてある

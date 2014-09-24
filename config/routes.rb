@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  resources :post_pictures
+
   get "spot/index"
   resources :posts
 
