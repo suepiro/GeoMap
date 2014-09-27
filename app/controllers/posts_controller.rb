@@ -6,10 +6,10 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
-  respond_to do |format|
-    format.html
-    format.json { render json: @posts }
-  end
+    respond_to do |format|
+      format.html
+      #format.json { render json: @posts }
+    end
 
   end
 
@@ -32,7 +32,19 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = current_user.posts.build(post_params)
+    postNo = params["post"]["post_id"]    #postの通番
+    postNo = postNo.to_i + 1
+    #userID = current_user.id
+    puts "suehiro debug"
+    puts params
+    puts "end"
+    if Post.exists?(postNo) == false
+      @post = current_user.posts.build(post_params)
+    else
+      params["post"]["user_id"] = current_user.id
+      @post = Post.find(postNo)
+      @post.update(post_params)
+    end
 
     respond_to do |format|
       if @post.save
@@ -40,9 +52,9 @@ class PostsController < ApplicationController
         #params[:post_pictures]['image'].each do |a|
         #  @post_picture = @post.post_pictures.create!(:image => a, :post_id => @post.id)
        #end
-       format.html { redirect_to posts_url, notice: 'Post was successfully created.' }
+       format.html { redirect_to posts_url, notice: 'Post was successfully created.' }  #createメソッドがhtmlで呼び出された場合
        #format.json { render action: 'show', status: :created, location: @post }
-       format.json { render json: @post, status: :created, location: @post }
+       format.json { render json: @post, status: :created, location: @post }            #createメソッドがjsonから呼び出された場合
       else
         #format.html { render action: 'new' }
         format.html {}

@@ -12,6 +12,8 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :post_id, :value => Post.count %>
+  
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -53,61 +55,52 @@
      </div>
    <% end %>
 -->
+  <div class="row fileupload-buttonbar">
+    <div class="col-lg-7">
+      <%= fields_for :post_pictures do |a| %>
+        <span class="btn btn-success fileinput-button">
+          <i class="glyphicon glyphicon-plus"></i>
+          <span>Add files...</span>
+          <%= a.file_field :image, :name => 'post[post_pictures_attributes][0][image]', :multiple => true %>      
+        </span>
 
-<div class="row fileupload-buttonbar">
-  <div class="col-lg-7">
-    <%= fields_for :post_pictures do |a| %>
-      <span class="btn btn-success fileinput-button">
-        <i class="glyphicon glyphicon-plus"></i>
-        <span>Add files...</span>
-        <%= a.file_field :image, :name => 'post[post_pictures_attributes][0][image]', :multiple => true %>      
-      </span>
+        <button type="submit" class="btn btn-primary start">
+          <i class="glyphicon glyphicon-upload"></i>
+          <span>Start Upload</span>
+        </button>
 
-      <button type="submit" class="btn btn-primary start">
-        <i class="glyphicon glyphicon-upload"></i>
-        <span>Start Upload</span>
-      </button>
+        <button type="reset" class="btn btn-warning cancel">
+          <i class="glyphicon glyphicon-ban-circle"></i>
+          <span>Cancel Upload</span>
+        </button>
 
-      <button type="reset" class="btn btn-warning cancel">
-        <i class="glyphicon glyphicon-ban-circle"></i>
-        <span>Cancel Upload</span>
-      </button>
+        <button type="button" class="btn btn-danger delete">
+          <i class="glyphicon glyphicon-trash"></i>
+          <span>Delete Upload</span>
+        </button>
+        <input type="checkbox" class="toggle">
 
-      <button type="button" class="btn btn-danger delete">
-        <i class="glyphicon glyphicon-trash"></i>
-        <span>Delete Upload</span>
-      </button>
-      <input type="checkbox" class="toggle">
+        <% end %>
+      </div>
 
-      <% end %>
+      <div class="col-lg-5">
+        <div class="progress progress-success progress-striped active fade">
+          <div class="bar" style="width:0%"></div>
+        </div>
+      </div>
     </div>
 
-    <div class="col-lg-5">
-      <div class="progress progress-success progress-striped active fade">
-      <div class="bar" style="width:0%"></div>
-    </div>
-  </div>
-
-</div>
-
-<div class="row fileupload-loading"></div>
-
-  <div class="row">
-    <table class="table table-striped">
-      <tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery">
-      </tbody>
-    </table>
-  </div>
-
-
-
-
-
-  <div class="actions">
-    <%= f.submit class: "btn btn-large btn-primary"%>
-  </div>
-
-<% end %>
+    <div class="row fileupload-loading"></div>
+      <div class="row">
+        <table class="table table-striped">
+          <tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery">
+          </tbody>
+        </table>
+      </div>
+      <div class="actions">
+        <%= f.submit class: "btn btn-large btn-primary"%>
+      </div>
+  <% end %>
 
 <script>
   var fileUploadErrors = {
