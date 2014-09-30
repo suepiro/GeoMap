@@ -10,13 +10,26 @@ class PostsController < ApplicationController
       format.html
       #format.json { render json: @posts }
     end
-
+    puts "=============="
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
     @post_pictures = @post.post_pictures.all
+
+    postNo = params[:id] #postの通番
+    postNo = postNo.to_i
+    @posts = Post.find(:all, :conditions => { :id => postNo })
+    @post_picture = @posts[0].post_pictures.all
+
+    puts @posts.length
+    puts @post_picture.length
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @post_picture }
+    end
   end
 
   # GET /posts/new
@@ -27,6 +40,20 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @post_pictures = @post.post_pictures.all
+    @posts = Post.all
+
+    puts "suehiro debug"
+    @post_pictures.each do |p|
+      puts p.image
+    end
+    puts "eeeeeeeeeeeeeeeeeeeeeee "
+
+    #respond_to do |format|
+      #format.html
+      #format.json { render json: @posts }
+    #end
+
   end
 
   # POST /posts
@@ -35,9 +62,6 @@ class PostsController < ApplicationController
     postNo = params["post"]["post_id"]    #postの通番
     postNo = postNo.to_i + 1
     #userID = current_user.id
-    puts "suehiro debug"
-    puts params
-    puts "end"
     if Post.exists?(postNo) == false
       @post = current_user.posts.build(post_params)
     else
