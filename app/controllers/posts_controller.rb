@@ -23,12 +23,17 @@ class PostsController < ApplicationController
     @posts = Post.find(:all, :conditions => { :id => postNo })
     @post_picture = @posts[0].post_pictures.all
 
-    puts @posts.length
-    puts @post_picture.length
+    @custom_post_picture = []
+    @post_picture.each do |pic|
+      @custom_post_picture << pic.to_jq_upload
+      #puts pic.to_jq_upload
+    end
 
+    puts @custom_post_picture
     respond_to do |format|
       format.html
-      format.json { render json: @post_picture }
+      #format.json { render json: [@post_picture.to_jq_upload].to_json }
+      format.json { render json: @custom_post_picture }
     end
   end
 
@@ -94,7 +99,14 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { head :no_content }
+        #format.json { head :no_content }
+	
+    	@post_pictures = @post.post_pictures.all
+    	@custom_post_pictures = []
+	@post_pictures.each do |pic|
+	  if post_params
+      	  @custom_post_picture << pic.to_jq_upload
+   	end
       else
         format.html { render action: 'edit' }
         format.json { render json: @post.errors, status: :unprocessable_entity }
