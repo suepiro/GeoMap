@@ -85,9 +85,7 @@ class PostsController < ApplicationController
        #format.json { render action: 'show', status: :created, location: @post }
        format.json { render json: @post, status: :created, location: @post }            #createメソッドがjsonから呼び出された場合
       else
-        #format.html { render action: 'new' }
         format.html {}
-        #format.json { render json: @post.errors, status: :unprocessable_entity }
         format.json {}
       end
     end
@@ -98,15 +96,23 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        #format.json { head :no_content }
-	
-    	@post_pictures = @post.post_pictures.all
-    	@custom_post_pictures = []
-	@post_pictures.each do |pic|
-	  if post_params
-      	  @custom_post_picture << pic.to_jq_upload
-   	end
+          @post_picture = @post.post_pictures.all
+          @custom_post_picture = []
+          @post_picture.each do |pic|
+            @custom_post_picture << pic.to_jq_upload
+          end
+
+          @shaped_custom_post_picture = []
+          @shaped_custom_post_picture << @custom_post_picture[@custom_post_picture.length - 1]
+
+          if post_params.has_key?("post_pictures_attributes") == false
+              format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+              format.json { head :no_content }
+          else
+              return_json = {"files" => @shaped_custom_post_picture }
+              format.html { render json: return_json, content_type:  'text/html',  layout: false}
+              format.json { render json: return_json }
+          end
       else
         format.html { render action: 'edit' }
         format.json { render json: @post.errors, status: :unprocessable_entity }
