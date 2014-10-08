@@ -1,0 +1,24 @@
+{
+  "marker":[
+    {"id":"C01","sta":"代々木上原","odpt-sta":"Chiyoda.YoyogiUehara","url":"http://www.tokyometro.jp/rosen/eki/yoyogi-uehara/index.html","addr":"東京都渋谷区西原3-8-5","lat":35.669066,"lng":139.67968},
+    {"id":"C02","sta":"代々木公園駅","odpt-sta":"Chiyoda.YoyogiKoen","url":"http://www.tokyometro.jp/rosen/eki/yoyogi-koen/index.html","addr":"東京都渋谷区富ケ谷1-3-9","lat":35.669188,"lng":139.689097},
+    {"id":"C03","sta":"明治神宮前駅","odpt-sta":"Chiyoda.MeijiJingumae","url":"http://www.tokyometro.jp/rosen/eki/meiji-jingumae/index.html","addr":"東京都渋谷区神宮前1-18-22","lat":35.669075,"lng":139.703994},
+    {"id":"C04","sta":"表参道駅","odpt-sta":"Chiyoda.OmoteSando","url":"http://www.tokyometro.jp/rosen/eki/omote-sando/index.html","addr":"東京都港区北青山3-6-12","lat":35.665244,"lng":139.712314},
+    {"id":"C05","sta":"乃木坂駅","odpt-sta":"Chiyoda.Nogizaka","url":"http://www.tokyometro.jp/rosen/eki/nogizaka/index.html","addr":"東京都港区南青山1-25-8","lat":35.666571,"lng":139.726219},
+    {"id":"C06","sta":"赤坂駅","odpt-sta":"Chiyoda.Akasaka","url":"http://www.tokyometro.jp/rosen/eki/akasaka/index.html","addr":"東京都港区赤坂5-4-5","lat":35.672134,"lng":139.736212},
+    {"id":"C07","sta":"国会議事堂前駅","odpt-sta":"Chiyoda.KokkaiGijidomae","url":"http://www.tokyometro.jp/rosen/eki/kokkai-gijidomae/index.html","addr":"東京都千代田区永田町1-7-1","lat":35.673934,"lng":139.745219},
+    {"id":"C08","sta":"霞ケ関駅","odpt-sta":"Chiyoda.Kasumigaseki","url":"http://www.tokyometro.jp/rosen/eki/kasumigaseki/index.html","addr":"東京都千代田区霞が関2-1-2","lat":35.67384,"lng":139.7509},
+    {"id":"C09","sta":"日比谷駅","odpt-sta":"Chiyoda.Hibiya","url":"http://www.tokyometro.jp/rosen/eki/hibiya/index.html","addr":"東京都千代田区有楽町1-5-1","lat":35.675117,"lng":139.75977},
+    {"id":"C10","sta":"二重橋前駅","odpt-sta":"Chiyoda.Nijubashimae","url":"http://www.tokyometro.jp/rosen/eki/nijubashimae/index.html","addr":"東京都千代田区丸ノ内2-3-1","lat":35.681072,"lng":139.761951},
+    {"id":"C11","sta":"大手町駅","odpt-sta":"Chiyoda.Otemachi","url":"http://www.tokyometro.jp/rosen/eki/otemachi/index.html","addr":"東京都千代田区大手町1-6-1","lat":35.684799,"lng":139.766087},
+    {"id":"C12","sta":"新御茶ノ水駅","odpt-sta":"Chiyoda.ShinOchanomizu","url":"http://www.tokyometro.jp/rosen/eki/shin-ochanomizu/index.html","addr":"東京都千代田区神田駿河台3丁目","lat":35.698072,"lng":139.766012},
+    {"id":"C13","sta":"湯島駅","odpt-sta":"Chiyoda.Yushima","url":"http://www.tokyometro.jp/rosen/eki/yushima/index.html","addr":"東京都文京区湯島3-47-10","lat":35.708242,"lng":139.76992},
+    {"id":"C14","sta":"根津駅","odpt-sta":"Chiyoda.Nezu","url":"http://www.tokyometro.jp/rosen/eki/nezu/index.html","addr":"東京都文京区根津1-3-5","lat":35.7174,"lng":139.765655},
+    {"id":"C15","sta":"千駄木駅","odpt-sta":"Chiyoda.Sendagi","url":"http://www.tokyometro.jp/rosen/eki/sendagi/index.html","addr":"東京都文京区千駄木2-32-5","lat":35.725546,"lng":139.763241},
+    {"id":"C16","sta":"西日暮里駅","odpt-sta":"Chiyoda.NishiNippori","url":"http://www.tokyometro.jp/rosen/eki/nishi-nippori/index.html","addr":"東京都荒川区西日暮里5-14-1","lat":35.732137,"lng":139.766787},
+    {"id":"C17","sta":"町屋駅","odpt-sta":"Chiyoda.Machiya","url":"http://www.tokyometro.jp/rosen/eki/machiya/index.html","addr":"東京都荒川区町屋1-1-5","lat":35.742798,"lng":139.781046},
+    {"id":"C18","sta":"北千住駅","odpt-sta":"Chiyoda.KitaSenju","url":"http://www.tokyometro.jp/rosen/eki/kita-senju/index.html","addr":"東京都足立区千住2-63","lat":35.749673,"lng":139.80488},
+    {"id":"C19","sta":"綾瀬駅","odpt-sta":"Chiyoda.Ayase","url":"http://www.tokyometro.jp/rosen/eki/ayase/index.html","addr":"東京都足立区綾瀬3-1-1","lat":35.762213,"lng":139.824916},
+    {"id":"C20","sta":"北綾瀬駅","odpt-sta":"Chiyoda.KitaAyase","url":"http://www.tokyometro.jp/rosen/eki/kita-ayase/index.html","addr":"東京都足立区谷中2-6-21","lat":35.777057,"lng":139.832037}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "marker":[
+    {"id":"G01","sta":"渋谷駅","odpt-sta":"Ginza.Shibuya","url":"http://www.tokyometro.jp/rosen/eki/shibuya/index.html","addr":"東京都渋谷区渋谷2-24-3","lat":35.658523,"lng":139.701333},
+    {"id":"G02","sta":"表参道駅","odpt-sta":"Ginza.OmoteSando","url":"http://www.tokyometro.jp/rosen/eki/omote-sando/index.html","addr":"東京都港区北青山3-6-12","lat":35.665246,"lng":139.712317},
+    {"id":"G03","sta":"外苑前駅","odpt-sta":"Ginza.Gaiemmae","url":"http://www.tokyometro.jp/rosen/eki/gaiemmae/index.html","addr":"東京都港区北青山2-7-16","lat":35.670532,"lng":139.717855},
+    {"id":"G04","sta":"青山一丁目駅","odpt-sta":"Ginza.AoyamaItchome","url":"http://www.tokyometro.jp/rosen/eki/aoyama-itchome/index.html","addr":"東京都港区南青山1-1-19","lat":35.672768,"lng":139.724164},
+    {"id":"G05","sta":"赤坂見附駅","odpt-sta":"Ginza.AkasakaMitsuke","url":"http://www.tokyometro.jp/rosen/eki/akasaka-mitsuke/index.html","addr":"東京都港区赤坂3-1-6","lat":35.677021,"lng":139.737052},
+    {"id":"G06","sta":"溜池山王駅","odpt-sta":"Ginza.TameikeSanno","url":"http://www.tokyometro.jp/rosen/eki/tameike-sanno/index.html","addr":"東京都千代田区永田町2-11-1","lat":35.673631,"lng":139.741419},
+    {"id":"G07","sta":"虎ノ門駅","odpt-sta":"Ginza.Toranomon","url":"http://www.tokyometro.jp/rosen/eki/toranomon/index.html","addr":"東京都港区虎ノ門1-1-21","lat":35.670227,"lng":139.749833},
+    {"id":"G08","sta":"新橋駅","odpt-sta":"Ginza.Shimbashi","url":"http://www.tokyometro.jp/rosen/eki/shimbashi/index.html","addr":"東京都港区新橋2-17-5","lat":35.66661,"lng":139.758121},
+    {"id":"G09","sta":"銀座駅","odpt-sta":"Ginza.Ginza","url":"http://www.tokyometro.jp/rosen/eki/ginza/index.html","addr":"東京都中央区銀座4-1-2","lat":35.671981,"lng":139.763971},
+    {"id":"G10","sta":"京橋駅","odpt-sta":"Ginza.Kyobashi","url":"http://www.tokyometro.jp/rosen/eki/kyobashi/index.html","addr":"東京都中央区京橋2-2-10","lat":35.676843,"lng":139.77011},
+    {"id":"G11","sta":"日本橋駅","odpt-sta":"Ginza.Nihombashi","url":"http://www.tokyometro.jp/rosen/eki/nihombashi/index.html","addr":"東京都中央区日本橋1-3-11","lat":35.682418,"lng":139.773924},
+    {"id":"G12","sta":"三越前駅","odpt-sta":"Ginza.Mitsukoshimae","url":"http://www.tokyometro.jp/rosen/eki/mitsukoshimae/index.html","addr":"東京都中央区日本橋室町1-8-1","lat":35.684891,"lng":139.773163},
+    {"id":"G13","sta":"神田駅","odpt-sta":"Ginza.Kanda","url":"http://www.tokyometro.jp/rosen/eki/kanda/index.html","addr":"東京都千代田区神田須田町1-16","lat":35.691696,"lng":139.770888},
+    {"id":"G14","sta":"末広町駅","odpt-sta":"Ginza.Suehirocho","url":"http://www.tokyometro.jp/rosen/eki/suehirocho/index.html","addr":"東京都千代田区外神田4-7-3","lat":35.702973,"lng":139.771717},
+    {"id":"G15","sta":"上野広小路駅","odpt-sta":"Ginza.UenoHirokoji","url":"http://www.tokyometro.jp/rosen/eki/ueno-hirokoji/index.html","addr":"東京都台東区上野3-29-3","lat":35.707678,"lng":139.772881},
+    {"id":"G16","sta":"上野駅","odpt-sta":"Ginza.Ueno","url":"http://www.tokyometro.jp/rosen/eki/ueno/index.html","addr":"東京都台東区東上野3-19-6","lat":35.713774,"lng":139.77725},
+    {"id":"G17","sta":"稲荷町駅","odpt-sta":"Ginza.Inaricho","url":"http://www.tokyometro.jp/rosen/eki/inaricho/index.html","addr":"東京都台東区東上野3-33-11","lat":35.711295,"lng":139.782599},
+    {"id":"G18","sta":"田原町駅","odpt-sta":"Ginza.Tawaramachi","url":"http://www.tokyometro.jp/rosen/eki/tawaramachi/index.html","addr":"東京都台東区西浅草1-1-18","lat":35.709901,"lng":139.790932},
+    {"id":"G19","sta":"浅草駅","odpt-sta":"Ginza.Asakusa","url":"http://www.tokyometro.jp/rosen/eki/asakusa/index.html","addr":"東京都台東区浅草1-1-3","lat":35.712068,"lng":139.798432}
+  ]
+}

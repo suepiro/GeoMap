@@ -1,0 +1,18 @@
+{
+  "marker":[
+    {"id":"Z01","sta":"渋谷駅","odpt-sta":"Hanzomon.Shibuya","url":"http://www.tokyometro.jp/rosen/eki/shibuya/index.html","addr":"東京都渋谷区渋谷2-24-3","lat":35.658521,"lng":139.701336},
+    {"id":"Z02","sta":"表参道駅","odpt-sta":"Hanzomon.OmoteSando","url":"http://www.tokyometro.jp/rosen/eki/omote-sando/index.html","addr":"東京都港区北青山3-6-12","lat":35.665253,"lng":139.712311},
+    {"id":"Z03","sta":"青山一丁目駅","odpt-sta":"Hanzomon.AoyamaItchome","url":"http://www.tokyometro.jp/rosen/eki/aoyama-itchome/index.html","addr":"東京都港区南青山1-1-19","lat":35.672768,"lng":139.724159},
+    {"id":"Z04","sta":"永田町駅","odpt-sta":"Hanzomon.Nagatacho","url":"http://www.tokyometro.jp/rosen/eki/nagatacho/index.html","addr":"東京都千代田区永田町1-11-28","lat":35.678758,"lng":139.74026},
+    {"id":"Z05","sta":"半蔵門駅","odpt-sta":"Hanzomon.Hanzomon","url":"http://www.tokyometro.jp/rosen/eki/hanzomon/index.html","addr":"東京都千代田区麹町1-6","lat":35.685701,"lng":139.741631},
+    {"id":"Z06","sta":"九段下駅","odpt-sta":"Hanzomon.Kudanshita","url":"http://www.tokyometro.jp/rosen/eki/kudanshita/index.html","addr":"東京都千代田区九段南1-6-1","lat":35.695587,"lng":139.751949},
+    {"id":"Z07","sta":"神保町駅","odpt-sta":"Hanzomon.Jimbocho","url":"http://www.tokyometro.jp/rosen/eki/jimbocho/index.html","addr":"東京都千代田区神田神保町2-2","lat":35.695495,"lng":139.758118},
+    {"id":"Z08","sta":"大手町駅","odpt-sta":"Hanzomon.Otemachi","url":"http://www.tokyometro.jp/rosen/eki/otemachi/index.html","addr":"東京都千代田区大手町1-6-1","lat":35.684801,"lng":139.766084},
+    {"id":"Z09","sta":"三越前駅","odpt-sta":"Hanzomon.Mitsukoshimae","url":"http://www.tokyometro.jp/rosen/eki/mitsukoshimae/index.html","addr":"東京都中央区日本橋室町1-8-1","lat":35.684886,"lng":139.77316},
+    {"id":"Z10","sta":"水天宮前駅","odpt-sta":"Hanzomon.Suitengumae","url":"http://www.tokyometro.jp/rosen/eki/suitengumae/index.html","addr":"東京都中央区日本橋蛎殻町2-1-1","lat":35.68269,"lng":139.78538},
+    {"id":"Z11","sta":"清澄白河駅","odpt-sta":"Hanzomon.KiyosumiShirakawa","url":"http://www.tokyometro.jp/rosen/eki/kiyosumi-shirakawa/index.html","addr":"東京都江東区白河1-6-13","lat":35.682102,"lng":139.798855},
+    {"id":"Z12","sta":"住吉駅","odpt-sta":"Hanzomon.Sumiyoshi","url":"http://www.tokyometro.jp/rosen/eki/sumiyoshi/index.html","addr":"東京都江東区猿江2-9-10","lat":35.689067,"lng":139.815651},
+    {"id":"Z13","sta":"錦糸町駅","odpt-sta":"Hanzomon.Kinshicho","url":"http://www.tokyometro.jp/rosen/eki/kinshicho/index.html","addr":"東京都墨田区江東橋3-14-6","lat":35.696436,"lng":139.813951},
+    {"id":"Z14","sta":"押上駅","odpt-sta":"Hanzomon.Oshiage","url":"http://www.tokyometro.jp/rosen/eki/oshiage/index.html","addr":"東京都墨田区押上1-1-65","lat":35.710701,"lng":139.81294}
+  ]
+}
